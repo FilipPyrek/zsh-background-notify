@@ -48,14 +48,14 @@ I do too! [Prezto](https://github.com/sorin-ionescu/prezto) rocks-- and works gr
 One can configure a few things:
 
 - `bgnotify_threshold` sets the notification threshold time (default 6 seconds)
-- `function notify_formatted` lets you change the notification
+- `function bgnotify_formatted` lets you change the notification
 
 Use these by adding a function definition before the your call to source. Example:
 
 ~~~ sh
 bgnotify_threshold=4  ## set your own notification threshold
 
-function notify_formatted {
+function bgnotify_formatted {
   ## $1=exit_status, $2=command, $3=elapsed_time
   [ $1 -eq 0 ] && title="Holy Smokes Batman!" || title="Holy Graf Zeppelin!"
   bgnotify "$title -- after $3 s" "$2";
